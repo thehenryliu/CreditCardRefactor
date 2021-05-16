@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="190" prefWidth="360" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="creditCardNumTextField" layoutX="30.0" layoutY="48.0" maxWidth="300.0" minWidth="300.0" onKeyReleased="#keyReleased" prefHeight="30.0" prefWidth="300.0" promptText="XXXXXXXXXXXXXXXX">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="7.0" left="55.0" top="7.0" />
+         </padding>
+      </TextField>
+      <ImageView fx:id="creditCardImageView" fitHeight="31.0" fitWidth="41.0" layoutX="38.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@unknowncard.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="30.0" layoutY="27.0" text="Credit Card Number">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="115.0" text="Expiration Date">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="expirationTextField" layoutX="26.0" layoutY="134.0" maxWidth="300.0" minWidth="150.0" onKeyReleased="#expirationKeyReleased" prefHeight="31.0" prefWidth="152.0" promptText="MM/YYYY">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="210.0" layoutY="115.0" text="CCV">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ccvTextField" layoutX="210.0" layoutY="134.0" maxWidth="300.0" minWidth="120.0" onKeyReleased="#ccvKeyReleased" prefHeight="31.0" prefWidth="20.0" promptText="XXX">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="validationResultCreditCardNum" fitHeight="31.0" fitWidth="41.0" layoutX="281.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@validationFailed.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="validationResultExpiration" fitHeight="31.0" fitWidth="41.0" layoutX="130.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@validationFailed.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="validationResultCcv" fitHeight="31.0" fitWidth="41.0" layoutX="280.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@validationFailed.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
